@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.util.*;
 
+//includes all graphics; vertical, horizontal, and original positions
 public class PositionGraphics {     
    public static void drawOriginal(DrawingPanel panel, Graphics g, ArrayList<Polygon> pol, ArrayList<Color> col, ArrayList<Integer> sign, int panelsize) {
       panel.setBackground(Color.BLACK);
@@ -25,6 +26,7 @@ public class PositionGraphics {
       }
    }
    
+   //draws fortune teller that is one third vertical
    public static void drawThirdVertical(DrawingPanel panel, Graphics g, ArrayList<Polygon> pol, ArrayList<Color> col, ArrayList<Integer> sign, int panelsize) {
       int j = 0;
       panel.sleep(700);
@@ -50,8 +52,10 @@ public class PositionGraphics {
       }
    }
    
+   //draws fortune teller that is two thirds vertical
    public static void drawTwoThirdsVertical(DrawingPanel panel, Graphics g, ArrayList<Polygon> pol, ArrayList<Color> col, ArrayList<Integer> sign, int panelsize, Polygon midd, int sleeping) {
       int j = 0; 
+      //so it lingers on the Vertical longer
       panel.sleep(sleeping);
       g.fillRect(0, 0, panelsize, panelsize);
       midd.reset();
@@ -86,6 +90,7 @@ public class PositionGraphics {
       }
    }
    
+   //draws fortune teller that is completely vertical
    public static void drawVertical(DrawingPanel panel, Graphics g, ArrayList<Polygon> pol, ArrayList<Color> col, ArrayList<Integer> sign, int panelsize, Polygon midd) {
       int j = 0; 
       panel.sleep(700);
@@ -113,7 +118,8 @@ public class PositionGraphics {
          g.drawLine(panelsize/2, panelsize/2 +s*panelsize*50/160, panelsize/2-4, panelsize/2);
       }
    }
-
+   
+   //draws fortune teller that is one third horizontal
    public static void drawThirdHorizontal(DrawingPanel panel, Graphics g, ArrayList<Polygon> pol, ArrayList<Color> col, ArrayList<Integer> sign, int panelsize, int sleeping) {
       int j = 0;
       panel.sleep(sleeping);
@@ -138,7 +144,8 @@ public class PositionGraphics {
          g.drawLine(panelsize/2, panelsize/2 + s*panelsize*50/160, panelsize/2, panelsize/2);
       }
    }
-   
+  
+   //draws fortune teller that is completely horizontal
    public static void drawHorizontal(DrawingPanel panel, Graphics g, ArrayList<Polygon> pol, ArrayList<Color> col, ArrayList<Integer> sign, int panelsize, Polygon midd) {
       int j = 0; 
       panel.sleep(700);
