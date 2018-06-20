@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.util.*;
 
+//calls both the graphics and FortuneTeller class
 public class FortuneTellerMain {
    public static final int PANELSIZE = 400;
    public static void main(String[] args) {
@@ -88,6 +89,7 @@ public class FortuneTellerMain {
       int pos = 0;
       int j = 0;
       int number = color.length();
+      //moves graphics number of times
       while (j < number) {
          PositionGraphics.drawOriginal(panel, g, pol, col, sign, PANELSIZE);
          PositionGraphics.drawThirdVertical(panel, g, pol, col, sign, PANELSIZE);
@@ -108,6 +110,7 @@ public class FortuneTellerMain {
             PositionGraphics.drawThirdHorizontal(panel, g, pol, col, sign, PANELSIZE, 1200);            
          }
       } 
+      //draws numbering on flaps
       int x = 7;
       int m = 1;
       for (int k = 0; k < 4; k=k+2) {
@@ -152,6 +155,7 @@ public class FortuneTellerMain {
                   pos = 1;
                }
             } 
+            //draws numbering on flaps
             x = 7;
             m = 1;
             for (int k = 0; k < 4; k=k+2) {
@@ -164,6 +168,7 @@ public class FortuneTellerMain {
                x = -15;
             }  
          } else {
+            //ends with black screen
             panel.setBackground(Color.BLACK);
             panel.sleep(700);
             g.fillRect(0, 0, PANELSIZE, PANELSIZE);
