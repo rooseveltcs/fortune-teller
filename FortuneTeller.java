@@ -31,6 +31,7 @@ public class FortuneTeller {
       }
    }
    
+   //changes numbers array based on if it's moved by an even or an odd number
    public ArrayList<Integer> moveBy(int move, ArrayList<Integer> numbers1, ArrayList<Integer> numbers2, ArrayList<Integer> current) {
       if (move % 2 == 0) {
          if (current.size() != 4) {
@@ -48,7 +49,8 @@ public class FortuneTeller {
       }
       return current; 
    } 
-
+   
+   //prints the final fortune to console (from finalFortune ArrayList)
    public void finalFortune(int flap, ArrayList<String> finalFortunes) {
       System.out.println(finalFortunes.get(flap - 1));
    }
