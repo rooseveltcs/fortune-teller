@@ -48,7 +48,7 @@ public class FortuneTeller {
       }
       return current; 
    } 
-   
+
    public void finalFortune(int flap, ArrayList<String> finalFortunes) {
       System.out.println(finalFortunes.get(flap - 1));
    }
