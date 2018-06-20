@@ -4,7 +4,7 @@ import java.util.*;
 public class PositionGraphics {     
    public static void drawOriginal(DrawingPanel panel, Graphics g, ArrayList<Polygon> pol, ArrayList<Color> col, ArrayList<Integer> sign, int panelsize) {
       panel.setBackground(Color.BLACK);
-      panel.sleep(500);
+      panel.sleep(700);
       g.fillRect(0, 0, panelsize, panelsize);
       int benchmark1 = panelsize*50/160;
       int j = 0;
@@ -27,7 +27,7 @@ public class PositionGraphics {
    
    public static void drawThirdVertical(DrawingPanel panel, Graphics g, ArrayList<Polygon> pol, ArrayList<Color> col, ArrayList<Integer> sign, int panelsize) {
       int j = 0;
-      panel.sleep(500);
+      panel.sleep(700);
       g.fillRect(0, 0, panelsize, panelsize);
       g.setColor(Color.GRAY);
       g.fillRect(panelsize/2 - panelsize*35/160, panelsize/2 - panelsize*20/160, panelsize*350/400/2, panelsize*200/400/2);
@@ -50,9 +50,9 @@ public class PositionGraphics {
       }
    }
    
-   public static void drawTwoThirdsVertical(DrawingPanel panel, Graphics g, ArrayList<Polygon> pol, ArrayList<Color> col, ArrayList<Integer> sign, int panelsize, Polygon midd) {
+   public static void drawTwoThirdsVertical(DrawingPanel panel, Graphics g, ArrayList<Polygon> pol, ArrayList<Color> col, ArrayList<Integer> sign, int panelsize, Polygon midd, int sleeping) {
       int j = 0; 
-      panel.sleep(500);
+      panel.sleep(sleeping);
       g.fillRect(0, 0, panelsize, panelsize);
       midd.reset();
       for (int i = 0; i < 4; i++) {
@@ -88,7 +88,7 @@ public class PositionGraphics {
    
    public static void drawVertical(DrawingPanel panel, Graphics g, ArrayList<Polygon> pol, ArrayList<Color> col, ArrayList<Integer> sign, int panelsize, Polygon midd) {
       int j = 0; 
-      panel.sleep(500);
+      panel.sleep(700);
       g.fillRect(0, 0, panelsize, panelsize);
       midd.reset();
       for (int i = 0; i < 4; i++) {
@@ -114,9 +114,9 @@ public class PositionGraphics {
       }
    }
 
-   public static void drawThirdHorizontal(DrawingPanel panel, Graphics g, ArrayList<Polygon> pol, ArrayList<Color> col, ArrayList<Integer> sign, int panelsize) {
+   public static void drawThirdHorizontal(DrawingPanel panel, Graphics g, ArrayList<Polygon> pol, ArrayList<Color> col, ArrayList<Integer> sign, int panelsize, int sleeping) {
       int j = 0;
-      panel.sleep(500);
+      panel.sleep(sleeping);
       g.fillRect(0, 0, panelsize, panelsize);
       g.setColor(Color.GRAY);
       g.fillRect(panelsize/2 - panelsize*21/160, panelsize/2 - panelsize*35/160, panelsize*210/400/2, panelsize*350/400/2);
@@ -141,7 +141,7 @@ public class PositionGraphics {
    
    public static void drawHorizontal(DrawingPanel panel, Graphics g, ArrayList<Polygon> pol, ArrayList<Color> col, ArrayList<Integer> sign, int panelsize, Polygon midd) {
       int j = 0; 
-      panel.sleep(500);
+      panel.sleep(700);
       g.fillRect(0, 0, panelsize, panelsize);
       midd.reset();
       for (int i = 0; i < 4; i++) {
@@ -166,7 +166,5 @@ public class PositionGraphics {
          g.drawLine(panelsize/2, panelsize/2 +s*panelsize*50/160, panelsize/2, panelsize/2);
       }
    }
-   
-   //public static void drawNumbers(DrawingPanel panel, Graphics g, 
 }
 
